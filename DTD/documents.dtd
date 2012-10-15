@@ -1,0 +1,12 @@
+<!ELEMENT author ( #PCDATA ) >
+
+<!ELEMENT document ( title, author+, year ) >
+<!ATTLIST document type NMTOKEN #REQUIRED >
+
+<!ELEMENT documents ( document+ ) >
+
+<!ELEMENT library ( documents ) >
+
+<!ELEMENT title ( #PCDATA ) >
+
+<!ELEMENT year ( #PCDATA ) >

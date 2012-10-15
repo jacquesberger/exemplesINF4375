@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+
+<discography xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="document-schema.xsd">
+	<artist>Jacques Berger</artist>
+	<release type="demo">
+		<name>TristeCiel</name>
+		<artist>TristeCiel</artist>
+		<year>2006</year>
+		<label>Independant</label>
+	</release>
+	<release type="demo">
+		<name>Untitled</name>
+		<artist>Curism</artist>
+		<year>2009</year>
+		<label>Independant</label>
+	</release>
+	<release type="album">
+		<name>Rouge</name>
+		<artist>Chimères</artist>
+		<year>2010</year>
+		<label>Independant</label>
+	</release>
+	<release type="album">
+		<name>Under The Fall</name>
+		<artist>Curism</artist>
+		<year>2011</year>
+		<label>Independant</label>
+	</release>
+</discography>
