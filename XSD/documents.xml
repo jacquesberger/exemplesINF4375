@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-         xsi:noNamespaceSchemaLocation="documents.xsd">
+         xsi:noNamespaceSchemaLocation="library-poupees-russes.xsd">
 	<documents>
         <document type="book">
             <title>Théorie de la musique</title>
