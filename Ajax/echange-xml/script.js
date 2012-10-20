@@ -18,7 +18,7 @@ function reload() {
 	request.open("GET", url, true);
 
 	request.onreadystatechange = function() {
-		if (request.readyState == 4) {
+		if (request.readyState === 4) {
 			var xmlDom = request.responseXML;
 			
 			var timeContainer = document.getElementById("time");
