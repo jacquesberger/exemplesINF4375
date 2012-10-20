@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+  <start>
+    <element name="library">
+      <ref name="documents" />
+    </element>
+  </start>
+
+  <define  name="documents">
+    <element name="documents">
+      <oneOrMore>
+        <ref name="document" />
+      </oneOrMore>
+    </element>
+  </define>
+
+  <define name="document">
+    <element name="document">
+      <attribute name="type" />
+      <element name="title">
+         <text />
+      </element>
+      <oneOrMore>
+        <element name="author">
+           <text />
+        </element>
+      </oneOrMore>
+      <element name="year">
+         <text />
+      </element>
+      <optional>
+        <element name="edition">
+           <text />
+        </element>
+      </optional>
+    </element>
+  </define>
+</grammar>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<library>
+	<documents>
+		<document type="book">
+			<title>Théorie de la musique</title>
+			<author>A. Danhauser</author>
+			<year>1996</year>
+			<edition>2nd edition</edition>
+		</document>
+		<document type="book">
+			<title>Test-Driven Development by Example</title>
+			<author>Kent Beck</author>
+			<year>2003</year>
+		</document>
+		<document type="book">
+			<title>Design Patterns - Elements of Reusable Object-Oriented Software</title>
+			<author>Erich Gamma</author>
+			<author>Richard Helm</author>
+			<author>Ralph Johnson</author>
+			<author>John Vlissides</author>
+			<year>1995</year>
+		</document>
+		<document type="article">
+			<title>XML Schema</title>
+			<author>Eric van der Vlist</author>
+			<year>2001</year>
+		</document>
+		<document type="book">
+			<title>At Bertram's Hotel</title>
+			<author>Agatha Christie</author>
+			<year>1965</year>
+        </document>
+		<document type="book">
+			<title>Le cerveau des m�res</title>
+			<author>Katherine Ellison</author>
+			<year>2005</year>
+        </document>
+		<document type="book">
+			<title>J'ai serré la main du diable</title>
+			<author>Lieutenant-général Roméo Dallaire</author>
+			<year>2003</year>
+        </document>
+		<document type="book">
+			<title>Object-Oriented Analysis</title>
+			<author>Peter Coad</author>
+			<author>Edward Yourdon</author>
+			<year>1991</year>
+        </document>
+		<document type="book">
+			<title>Object-Oriented Design</title>
+			<author>Peter Coad</author>
+			<author>Edward Yourdon</author>
+			<year>1991</year>
+        </document>
+		<document type="book">
+			<title>Nos amis les humains</title>
+			<author>Bernard Werber</author>
+			<year>2003</year>
+        </document>
+		<document type="book">
+			<title>Le livre secret des fourmis</title>
+			<author>Bernard Werber</author>
+			<year>1993</year>
+        </document>
+		<document type="book">
+			<title>L'été meurtrier</title>
+			<author>Sébastien Japrisot</author>
+			<year>1977</year>
+        </document>
+		<document type="book">
+			<title>The Lights of Earth</title>
+			<author>Gina Berriault</author>
+			<year>1984</year>
+        </document>
+		<document type="book">
+			<title>Le grand cahier</title>
+			<author>Agota Kristof</author>
+			<year>1986</year>
+        </document>
+		<document type="book">
+			<title>Managing Software Requirements - A Use Case Approach</title>
+			<author>Dean Leffingwell</author>
+			<author>Don Widrig</author>
+			<year>2003</year>
+			<edition>2nd edition</edition>
+        </document>
+		<document type="book">
+			<title>Dracula</title>
+			<author>Bram Stoker</author>
+			<year>1979</year>
+        </document>
+		<document type="book">
+			<title>Le Comte de Monte-Cristo I</title>
+			<author>Alexandre Dumas</author>
+			<year>1981</year>
+        </document>
+		<document type="book">
+			<title>Le Silmarillion</title>
+			<author>J.R.R. Tolkien</author>
+			<year>1978</year>
+        </document>
+		<document type="book">
+			<title>Le Petit Chose</title>
+			<author>Alphonse Daudet</author>
+			<year>1985</year>
+        </document>
+		<document type="book">
+			<title>L'Alchimiste</title>
+			<author>Paulo Coelho</author>
+			<year>1988</year>
+        </document>
+		<document type="book">
+			<title>L'étranger</title>
+			<author>Albert Camus</author>
+			<year>1942</year>
+        </document>
+		<document type="book">
+			<title>La peste</title>
+			<author>Albert Camus</author>
+			<year>1947</year>
+        </document>
+		<document type="book">
+			<title>Journal</title>
+			<author>Anne Frank</author>
+			<year>1950</year>
+        </document>
+		<document type="book">
+			<title>L'avare</title>
+			<author>Molière</author>
+			<year>2000</year>
+        </document>
+		<document type="book">
+			<title>The Crucible</title>
+			<author>Arthur Miller</author>
+			<year>1952</year>
+        </document>
+		<document type="book">
+			<title>Contes réalistes et contes fantastiques</title>
+			<author>Guy de Maupassant</author>
+			<year>1999</year>
+        </document>
+		<document type="book">
+			<title>Le sommeil retrouvé</title>
+			<author>Dr Mireille Peyronnet</author>
+			<year>2006</year>
+        </document>
+	</documents>
+</library>
