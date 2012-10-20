@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="title" type="xs:string" />
+  <xs:element name="author" type="xs:string" />
+  <xs:element name="year" type="xs:string" />
+  <xs:element name="edition" type="xs:string" />
+  <xs:attribute name="type" type="xs:string" />
+
+  <xs:element name="document">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="title" />
+        <xs:element ref="author" maxOccurs="unbounded" />
+        <xs:element ref="year" />
+        <xs:element ref="edition" minOccurs="0" />
+      </xs:sequence>
+      <xs:attribute ref="type" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="documents">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="document" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="library">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="documents" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
