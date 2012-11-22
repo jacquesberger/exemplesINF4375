@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Injection HTML</title>
+<script type="text/javascript">
+	function addTextToPage() {
+		var divInput = document.getElementById("input");
+		var textArea = document.getElementById("text");
+		divInput.innerHTML = divInput.innerHTML + textArea.value + "<br>";
+	}
+</script>
+</head>
+<body>
+	<textarea id="text" rows="25" cols="50"></textarea>
+	<button onclick="addTextToPage();">Ajouter</button>
+	<p>Voici l'endroit où le texte devra s'afficher :</p>
+	<div id="input"></div>
+</body>
+</html>
