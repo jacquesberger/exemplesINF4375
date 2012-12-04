@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Invocation d'un service SOAP avec Javascript</title>
+<script type="text/javascript">
+	function getCourseName(identifier) {
+		var xmlDocument = "<?xml version='1.0' encoding='UTF-8'?>"
+				+ "<S:Envelope xmlns:S='http://schemas.xmlsoap.org/soap/envelope/'>"
+				+ "<S:Header/>"
+				+ "<S:Body>"
+				+ "<ns2:getCourseName xmlns:ns2='http://course.services.jberger.org/'>"
+				+ "<identifier>" + identifier + "</identifier>"
+				+ "</ns2:getCourseName>" + "</S:Body>" + "</S:Envelope>";
+
+		var request = new XMLHttpRequest();
+		request.open("POST",
+				"http://localhost:8080/CourseName/CourseNameService", false);
+		request.setRequestHeader("Content-Type", "text/xml");
+		request.setRequestHeader("SOAPAction", "");
+		request.send(xmlDocument);
+
+		return request.responseXML.getElementsByTagName("return")[0].textContent;
+	}
+
+	function processOperation() {
+		var textBoxElement = document.getElementById("courseid");
+		var courseName = getCourseName(textBoxElement.value);
+		var responseElement = document.getElementById("response");
+		responseElement.innerHTML = courseName;
+	}
+</script>
+</head>
+<body>
+	<div>
+		Sigle du cours : <input type="text" name="courseid" id="courseid"
+			size="15"> <br> <input type="button" value="Trouver"
+			onclick="processOperation();"> <br> <span id="response"></span>
+	</div>
+</body>
+</html>
