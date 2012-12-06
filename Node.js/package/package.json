@@ -1,0 +1,10 @@
+{
+  "name": "XPathExample",
+  "description": "A project to show how to use a package.json manifest",
+  "author": "Jacques Berger",
+  "version": "0.0.1",
+  "dependencies": {
+    "xmldom": "~0.1.13",
+    "xpath": "0.0.5"
+  }
+}
