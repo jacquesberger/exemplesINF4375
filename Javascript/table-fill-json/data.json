@@ -1,0 +1,26 @@
+[
+  {
+    "sigle": "INF2005",
+    "titre": "Programmation web"
+  },
+  {
+    "sigle": "INF2015",
+    "titre": "Développement de logiciels dans un environnement Agile"
+  },
+  {
+    "sigle": "INF4170",
+    "titre": "Architecture des ordinateurs"
+  },
+  {
+    "sigle": "INF4375",
+    "titre": "Paradigmes des échanges Internet"
+  },
+  {
+    "sigle": "INM5151",
+    "titre": "Projet d'analyse et de modélisation"
+  },
+  {
+    "sigle": "MGL7460",
+    "titre": "Réalisation et maintenance des logiciels"
+  }
+]

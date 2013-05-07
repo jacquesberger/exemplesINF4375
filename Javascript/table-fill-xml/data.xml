@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+  <cours>
+    <sigle>INF2005</sigle>
+    <titre>Programmation web</titre>
+  </cours>
+  <cours>
+    <sigle>INF2015</sigle>
+    <titre>Développement de logiciel dans un environnement Agile</titre>
+  </cours>
+  <cours>
+    <sigle>INF4170</sigle>
+    <titre>Architecture des ordinateurs</titre>
+  </cours>
+  <cours>
+    <sigle>INF4375</sigle>
+    <titre>Paradigmes des échanges Internet</titre>
+  </cours>
+  <cours>
+    <sigle>INM5151</sigle>
+    <titre>Projet d'analyse et de modélisation</titre>
+  </cours>
+  <cours>
+    <sigle>MGL7460</sigle>
+    <titre>Réalisation et maintenance des logiciels</titre>
+  </cours>
+</data>

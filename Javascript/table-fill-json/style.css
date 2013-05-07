@@ -1,0 +1,20 @@
+body {
+  text-align: center;
+}
+
+table {
+  margin: auto;
+  width: 500px;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th.sigle {
+  width: 25%;
+}
+
+button {
+  margin-top: 20px;
+}
