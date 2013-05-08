@@ -46,7 +46,7 @@ function fillTable() {
 
   for (var i = 0; i < data.length; i++) {
     var currentObject = data[i];
-    htmlResult = htmlResult + "<tr><td>" + currentObject.sigle +
+    htmlResult += "<tr><td>" + currentObject.sigle +
       "</td><td>" + currentObject.titre + "</td></tr>";
   }
 

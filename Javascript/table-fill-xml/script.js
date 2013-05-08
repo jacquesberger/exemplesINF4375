@@ -28,7 +28,7 @@ function fillTable() {
   var courseList = xmlDom.getElementsByTagName("cours");
   for (var i = 0; i < courseList.length; i++) {
     var course = courseList[i];
-    htmlResult = htmlResult + "<tr><td>" +
+    htmlResult += "<tr><td>" +
       course.getElementsByTagName("sigle")[0].textContent +
       "</td><td>" + course.getElementsByTagName("titre")[0].textContent +
       "</td></tr>";
