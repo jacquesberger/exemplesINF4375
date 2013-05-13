@@ -14,10 +14,16 @@
  * limitations under the License.
  */
 
-var http = require("http");
+var fs = require("fs");
+var xmldom = require("xmldom");
+var xpath = require("xpath");
 
-http.createServer(function(req, res) {
-	res.writeHead(200, {"Content-Type" : "text/plain"});
-	res.write("Hello World!");
-	res.end();
-}).listen(3000);
+fs.readFile("document.xml", function(err, data) {
+  if (err) {
+    console.log("Error reading XML document");
+  } else {
+    var domRoot = new xmldom.DOMParser().parseFromString(data.toString());
+    var count = xpath.select("count(//document[@type = 'book'])", domRoot);
+    console.log("There is", count, "books in document.xml");
+  }
+});

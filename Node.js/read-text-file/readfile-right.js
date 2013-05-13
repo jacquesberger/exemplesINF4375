@@ -14,10 +14,15 @@
  * limitations under the License.
  */
 
-var http = require("http");
+var fs = require("fs");
 
-http.createServer(function(req, res) {
-	res.writeHead(200, {"Content-Type" : "text/plain"});
-	res.write("Hello World!");
-	res.end();
-}).listen(3000);
+console.log("Avant la lecture du fichier");
+fs.readFile("textfile", function(err, data) {
+  console.log("Voici les données du fichier : " + data);
+  console.log("Après la lecture du fichier");
+});
+
+/*
+ * Pour que l'ordre des console.log soit cohérent, il faut déplacer le dernier
+ * console.log à l'intérieur du callback.
+ */
