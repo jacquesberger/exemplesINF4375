@@ -1,0 +1,9 @@
+{
+  "name": "BookServices",
+  "description": "A project to show how to send different mime type responses",
+  "author": "Jacques Berger",
+  "version": "0.0.1",
+  "dependencies": {
+    "xmldom": "~0.1.13"
+  }
+}

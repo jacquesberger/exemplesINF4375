@@ -17,22 +17,24 @@
 var fs = require("fs");
 var xmldom = require("xmldom");
 
-fs.readFile("document.xml", function(err, data) {
-  if (err) {
-    console.log("Error reading XML document");
-  } else {
-    var domRoot = new xmldom.DOMParser().parseFromString(data.toString());
-    var documentList = domRoot.getElementsByTagName("document");
-    if (!documentList.length) {
-      console.log("La liste ne contient aucun document.");
+exports.getBookReferences = function(callback) {
+  fs.readFile("document.xml", function(err, data) {
+    if (err) {
+      callback([]);
     } else {
-      console.log("La liste contient des documents :");
+      var result = [];
+      var domRoot = new xmldom.DOMParser().parseFromString(data.toString());
+      var documentList = domRoot.getElementsByTagName("document");
       for (var i = 0; i < documentList.length; i++) {
         var currentDocument = documentList[i];
-        var isBook = currentDocument.getAttribute("type") === "book";
-        var title = currentDocument.getElementsByTagName("title")[0].textContent;
-        console.log("*", title, isBook ? "[livre]" : "[article]");
+        if (currentDocument.getAttribute("type") === "book") {
+          var object = {};
+          object.title = currentDocument.getElementsByTagName("title")[0].textContent;
+          object.year = parseInt(currentDocument.getElementsByTagName("year")[0].textContent, 10);
+          result.push(object);
+        }
       }
+      callback(result);
     }
-  }
-});
+  });
+};
