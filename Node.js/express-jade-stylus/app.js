@@ -16,7 +16,6 @@
 
 var express = require('express')
   , routes = require('./routes')
-  , http = require('http')
   , path = require('path');
 
 var app = express();
@@ -40,6 +39,4 @@ app.get('/', routes.index);
 app.get('/xml', routes.xml);
 app.get('/json', routes.json);
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
-});
+app.listen(app.get('port'));
