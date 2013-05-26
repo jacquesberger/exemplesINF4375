@@ -1,0 +1,1 @@
+Un fichier encodé en latin1 avec des caractères spéciaux.

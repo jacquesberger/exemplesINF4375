@@ -1,0 +1,9 @@
+{
+  "name": "iconvExample",
+  "description": "A project to show how to convert text from latin1 to utf-8",
+  "author": "Jacques Berger",
+  "version": "0.0.1",
+  "dependencies": {
+    "iconv-lite": "~0.2.9"
+  }
+}
