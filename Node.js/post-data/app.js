@@ -39,7 +39,7 @@ main = function() {
     });
 
     res.on("end", function() {
-      htmlSource = chunks.join();
+      htmlSource = chunks.join("");
       console.log(htmlSource);
     });
   });

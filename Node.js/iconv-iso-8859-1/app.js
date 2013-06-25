@@ -32,7 +32,7 @@ var main = function() {
     });
 
     res.on("end", function() {
-      var datafile = chunks.join();
+      var datafile = chunks.join("");
       console.log(datafile);
     });
   });
