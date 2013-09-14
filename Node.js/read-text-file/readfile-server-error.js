@@ -29,12 +29,11 @@ http.createServer(function (req, res) {
       res.writeHead(404, {"Content-Type": "text/html"});
       res.write(generateHtmlDocument("File not found!", 
                              "The requested file was not found on the server."));
-      res.end();
     } else {
       res.writeHead(200, {"Content-Type": "text/html"});
       res.write(generateHtmlDocument("File content", data));
-      res.end();
     }
+    res.end();
   });
 
 }).listen(3000);

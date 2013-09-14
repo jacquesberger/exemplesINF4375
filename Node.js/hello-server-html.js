@@ -18,6 +18,8 @@ var http = require("http");
 
 http.createServer(function(req, res) {
 	res.writeHead(200, {"Content-Type" : "text/html"});
+
+  /* On génère le HTML exactement comme si c'était du texte. */
 	res.write("<!DOCTYPE html>");
 	res.write("<html>");
 	res.write("<head>");
