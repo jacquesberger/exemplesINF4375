@@ -22,7 +22,7 @@ db = new mongo.Db "inf4375", server, {safe:true}
 db.open (err, db) ->
   db.collection "disco", (err, collection) ->
 
-    # Supprimons The Eye de King Diamond. Le deuxième paramèetre au callback
+    # Supprimons The Eye de King Diamond. Le deuxième paramètre au callback
     # indique le nombre d'objets qui ont été supprimés.
     collection.remove {artist: "King Diamond", title: "The Eye"}, (err, number) ->
       console.log "Album supprimé"

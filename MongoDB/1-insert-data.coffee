@@ -16,7 +16,7 @@ mongo =  require "mongodb"
 
 # Note : Cet exemple ne contient aucune gestion d'erreur.
 
-# Représente une connexion au serveur de données
+# Représente une connexion au serveur de données.
 server = new mongo.Server "localhost", 27017
 
 # Un accès à la base de données inf4375 du serveur spécifié. Le troisième
