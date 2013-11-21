@@ -25,5 +25,7 @@ db.open (err, db) ->
     # Supprimons The Eye de King Diamond. Le deuxième paramètre au callback
     # indique le nombre d'objets qui ont été supprimés.
     collection.remove {artist: "King Diamond", title: "The Eye"}, (err, number) ->
-      console.log "Album supprimé"
+      if number > 0
+        plural = if number > 1 then "s" else ""
+        console.log "Album#{plural} supprimé#{plural}"
       db.close()

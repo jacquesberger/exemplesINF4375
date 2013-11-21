@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-mongo =  require "mongodb"
+mongo = require "mongodb"
 
 # Note : Cet exemple ne contient aucune gestion d'erreur.
 
@@ -77,7 +77,7 @@ db.open (err, db) ->
 
         # On affiche la liste complète des albums dans la collection pour
         # montrer que les deux insertions ont bien fonctionnées.
-        (collection.find {}).toArray (err, albums) ->
+        collection.find().toArray (err, albums) ->
           for album in albums
             console.log "L'album #{album.title} de l'artiste #{album.artist} a été publié en #{album.year}."
 

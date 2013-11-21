@@ -90,5 +90,6 @@ db.open (err, db) ->
 
       # On supprime tous les albums d'un seul coup.
       collection.remove {artist: "Iron Maiden"}, (err, number) ->
-        console.log "#{number} albums supprimés"
+        plural = if number > 1 then "s" else ""
+        console.log "#{number} album#{plural} supprimé#{plural}"
         db.close()
