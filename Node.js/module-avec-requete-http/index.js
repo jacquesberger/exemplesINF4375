@@ -18,13 +18,20 @@ var http = require("http");
 var jberger = require("./jberger.js");
 
 http.createServer(function (req, res) {
-  
+ 
+  // On appelle la méthode extractNumberOfPosts et on lui donne en paramètre une
+  // méthode qu'elle va appeler lorsque son traitement sera terminé.
+  // extractNumberOfPosts appellera notre callback en lui passant en paramètre
+  // un code d'erreur (en cas d'erreur) et le nombre de posts sur le site.
   jberger.extractNumberOfPosts(function (err, postNumber) {
     if (err) {
+      // En cas d'erreur, le serveur retourne un code http 500 avec une chaîne
+      // de caractères décrivant l'erreur qui s'est produite.
       res.writeHead(500, {"Content-Type": "text/plain"});
       res.write("Server error: " + err);
       res.end();
     } else {
+      // En cas de succès, le serveur retourne un document html.
       res.writeHead(200, {"Content-Type": "text/html"});
       res.write("<!DOCTYPE html><html><head><meta charset='utf-8'>" +
                 "<title>Number of posts</title></head><body><p>" +
