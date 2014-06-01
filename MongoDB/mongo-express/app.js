@@ -14,8 +14,6 @@
  * limitations under the License.
  */
 
-require('coffee-script');
-
 var express = require('express'),
     path = require('path'),
     mongo = require('mongodb');
