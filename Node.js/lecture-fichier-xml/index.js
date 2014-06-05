@@ -23,7 +23,7 @@ fs.readFile("document.xml", function(err, data) {
     console.log("Error reading XML document");
   } else {
     // Le fichier XML est retourné sous forme d'un buffer. Nous devons le
-    // transgormer en chaîne de caractères avant de l'envoyer au parser DOM.
+    // transformer en chaîne de caractères avant de l'envoyer au parser DOM.
     var domRoot = new xmldom.DOMParser().parseFromString(data.toString());
     var documentList = domRoot.getElementsByTagName("document");
     if (!documentList.length) {
