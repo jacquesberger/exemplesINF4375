@@ -22,3 +22,25 @@ schéma) représentant une liste de documents.
 (relié à un schéma) représentant une liste de publications musicales.
 
 [document-schema.xsd](XML/document-schema.xsd) Le schéma du document structurel.
+
+
+Node.js
+-------
+
+[hello-world.js](Node.js/hello-world.js) Un Hello World! avec Node.js.
+
+[console-log-avec-conditions.js](Node.js/console-log-avec-conditions.js) Un
+script contenant des console.log avec diverses conditions et manipulations de
+variables.
+
+[hello-server-text.js](Node.js/hello-server-text.js) Un serveur HTTP qui
+retourne un Hello World! en texte.
+
+[hello-server-html.js](Node.js/hello-server-html.js) Un serveur HTTP qui
+retourne un Hello World! en HTML.
+
+[lecture-fichier-texte](Node.js/lecture-fichier-texte) Le répertoire contient un
+mauvais exemple d'utilisation d'un callback lors de la lecture d'un fichier
+texte, ainsi qu'un bon exemple pour le même traitement. Il contient également un
+exemple d'un serveur HTTP qui retourne le contenu du fichier texte en format
+HTML.
