@@ -53,3 +53,6 @@ retourne le nombre de publications en format HTML.
 package.json. Le script utilise les packages xmldom et xpath pour faire la
 lecture d'un document XML et afficher le nombre de livres contenus dans le
 document XML.
+
+[lecture-fichier-xml](Node.js/lecture-fichier-xml) Exemple de lecture d'un
+fichier XML avec xmldom.
