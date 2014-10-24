@@ -68,3 +68,12 @@ fichier XML avec xmldom.
 
 [MongoDB](MongoDB/exemples/) Plusieurs exemples d'utilisation de MongoDB avec
 Node.js.
+
+
+Express.js
+----------
+
+[Routing](Node.js/Express.js/routing-parametres/) Une application Express.js qui
+illustre comment faire du routing avec les URLs.
+
+

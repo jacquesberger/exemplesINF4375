@@ -1,5 +1,5 @@
 /*
- * Copyright 2013 Jacques Berger.
+ * Copyright 2014 Jacques Berger.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,24 +14,20 @@
  * limitations under the License.
  */
 
-var express = require('express')
-  , routes = require('./routes')
-  , path = require('path');
+var express = require('express');
+var router = express.Router();
 
-var app = express();
+var taxes = require("./taxes/taxes");
 
-app.set('port', process.env.PORT || 3000);
-app.use(express.bodyParser());
-app.use(express.methodOverride());
-app.use(app.router);
-
-if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
-}
-
-app.get('/', routes.index);
-app.get('/:unit/:quantity', routes.taxes);
-
-app.listen(app.get('port'), function() {
-  console.log('Express server listening on port ' + app.get('port'));
+router.get('/', function(req, res) {
+  res.json(taxes.getTaxRates());
 });
+
+router.get('/:unit/:quantity', function(req, res) {
+  // La gestion d'erreurs n'a pas été faite.
+  var price = parseFloat(req.params.unit);
+  var quantity = parseInt(req.params.quantity, 10);
+  res.json(taxes.getTotalWithTaxes(price, quantity));
+});
+
+module.exports = router;
