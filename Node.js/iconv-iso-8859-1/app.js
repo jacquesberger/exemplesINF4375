@@ -14,6 +14,11 @@
  * limitations under the License.
  */
 
+/* Le fichier datafile.txt est accédé au travers d'un serveur HTTP à l'adresse
+ * 0.0.0.0:8000. Exécutez la commande suivante dans le même répertoire que le
+ * fichier : python -m SimpleHTTPServer
+ */
+
 var http = require("http");
 var iconv = require("iconv-lite");
 

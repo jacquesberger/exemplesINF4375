@@ -72,6 +72,9 @@ Node.js.
 [formulaire](Node.js/formulaire/) Exemple d'envoi d'un formulaire à une
 application Node.js à l'aide d'un POST.
 
+[iconv](Node.js/iconv-iso-8859-1/) Conversion d'un fichier encodé en latin1 vers
+utf-8.
+
 
 Express.js
 ----------
