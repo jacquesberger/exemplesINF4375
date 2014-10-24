@@ -69,7 +69,7 @@ fichier XML avec xmldom.
 [MongoDB](MongoDB/exemples/) Plusieurs exemples d'utilisation de MongoDB avec
 Node.js.
 
-[formulaire](Node.js/formulaire/) Exemple d'envoie d'un formulaire à une
+[formulaire](Node.js/formulaire/) Exemple d'envoi d'un formulaire à une
 application Node.js à l'aide d'un POST.
 
 
