@@ -85,5 +85,8 @@ illustre comment faire du routing avec les URLs.
 [Validation](Node.js/Express.js/validation/) Le backend reçoit des données du
 frontend et y applique une validation avec json-schema.
 
-[Services](Node.js/Express.js/services-jade-stylus) Services REST simples
+[Services](Node.js/Express.js/services-jade-stylus/) Services REST simples
 retournant des données en HTML, XML et JSON. Utilise Jade et Stylus.
+
+[formulaire](Node.js/Express.js/formulaire/) Application Express.js pour
+illustrer les redirections et la navigation d'un site avec un formulaire.

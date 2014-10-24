@@ -1,5 +1,5 @@
 /*
- * Copyright 2013 Jacques Berger.
+ * Copyright 2014 Jacques Berger.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,15 +14,18 @@
  * limitations under the License.
  */
 
-exports.index = function(req, res) {
+var express = require('express');
+var router = express.Router();
+
+router.get('/', function(req, res) {
   res.render('index');
-};
+});
 
-exports.signer = function(req, res) {
+router.get('/signer', function(req, res) {
   res.render('signer');
-};
+});
 
-exports.signature = function(req, res) {
+router.post('/signature', function(req, res) {
   console.log("Nom :", req.body.nom);
   console.log("Prénom :", req.body.prenom);
   console.log("Municipalité :", req.body.municipalite);
@@ -31,8 +34,10 @@ exports.signature = function(req, res) {
   // C'est ici qu'on sauvegarderait les données.
 
   res.redirect('/merci');
-};
+});
 
-exports.merci = function(req, res) {
+router.get('/merci', function(req, res) {
   res.render('merci');
-};
+});
+
+module.exports = router;
