@@ -65,3 +65,6 @@ document XML.
 
 [lecture-fichier-xml](Node.js/lecture-fichier-xml/) Exemple de lecture d'un
 fichier XML avec xmldom.
+
+[MongoDB](MongoDB/exemples/) Plusieurs exemples d'utilisation de MongoDB avec
+Node.js.
