@@ -14,6 +14,9 @@
  * limitations under the License.
  */
 
+var express = require('express');
+var router = express.Router();
+
 var jsonschema = require('jsonschema');
 
 var schema = {
@@ -35,15 +38,11 @@ var schema = {
   }
 }
 
-exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
-};
-
-exports.test = function(req, res){
+router.get('/', function(req, res) {
   res.render('test');
-};
+});
 
-exports.json = function(req, res) {
+router.post('/json', function(req, res) {
   var data = req.body;
   var validate = require('jsonschema').validate;
   var result = validate(data, schema);
@@ -52,4 +51,6 @@ exports.json = function(req, res) {
   } else {
     res.send(400);
   }
-};
+});
+
+module.exports = router;

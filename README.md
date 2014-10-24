@@ -82,4 +82,5 @@ Express.js
 [Routing](Node.js/Express.js/routing-parametres/) Une application Express.js qui
 illustre comment faire du routing avec les URLs.
 
-
+[Validation](Node.js/Express.js/validation/) Le backend reçoit des données du
+frontend et y applique une validation avec json-schema.
