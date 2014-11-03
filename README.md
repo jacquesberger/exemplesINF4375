@@ -90,3 +90,7 @@ retournant des données en HTML, XML et JSON. Utilise Jade et Stylus.
 
 [formulaire](Node.js/Express.js/formulaire/) Application Express.js pour
 illustrer les redirections et la navigation d'un site avec un formulaire.
+
+[MongoDB](Node.js/Express.js/mongodb-express) Application Express.js utilisant
+MongoDB pour illustrer comment utiliser un pool de connexions à la base de
+données.
