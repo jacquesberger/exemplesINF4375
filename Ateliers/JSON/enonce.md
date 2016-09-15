@@ -40,9 +40,9 @@ Exercices
    * le nom de l'enseignant,
    * la note lettrée obtenue.
 
-<!-- Solutions -->
-<!-- --------- -->
+Solutions
+---------
 
-<!-- * [Exercice #2](Exercice2.json) -->
-<!-- * [Exercice #3](Exercice3.json) -->
-<!-- * [Exercice #4](Exercice4.json) -->
+* [Exercice #2](Exercice2.json)
+* [Exercice #3](Exercice3.json)
+* [Exercice #4](Exercice4.json)
