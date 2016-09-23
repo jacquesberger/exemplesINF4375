@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<groups>
+    <group>
+        <courseId>INF4375</courseId>
+        <groupId>50</groupId>
+        <studentCount>63</studentCount>
+    </group>
+    <group>
+        <courseId>INF2015</courseId>
+        <groupId>10</groupId>
+        <studentCount>79</studentCount>
+    </group>
+    <group>
+        <courseId>MGL7460</courseId>
+        <groupId>40</groupId>
+        <studentCount>11</studentCount>
+    </group>
+</groups>
