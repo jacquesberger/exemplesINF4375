@@ -28,7 +28,7 @@ Exercices
    * une liste de visites (pour chaque visite, on conserve la date, le sujet de
      la visite et une description du médecin).
 
-<!-- Solutions -->
-<!-- --------- -->
+Solutions
+---------
 
-<!-- * [Exercice #2](Exercice2.xml) -->
+* [Exercice #2](Exercice2.xml)

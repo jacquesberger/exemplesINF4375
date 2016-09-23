@@ -21,7 +21,7 @@ Exercices
     enseignant).
   Validez votre document à [https://validator.w3.org/](https://validator.w3.org/).
 
-<!-- Solutions -->
-<!-- --------- -->
+Solutions
+---------
 
-<!-- * [Exercice #1](Exercice1.html) -->
+* [Exercice #1](Exercice1.html)
