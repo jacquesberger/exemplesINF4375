@@ -1,2 +1,7 @@
-.project
 *.swp
+Historique/FileTransferExample/FileTransferClient/build/
+Historique/FileTransferExample/FileTransferClient/dist/
+Historique/FileTransferExample/FileTransferClient/nbproject/private/
+Historique/FileTransferExample/FileTransferServer/build/
+Historique/FileTransferExample/FileTransferServer/dist/
+Historique/FileTransferExample/FileTransferServer/nbproject/private/
