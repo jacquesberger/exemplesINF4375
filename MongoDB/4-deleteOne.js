@@ -24,9 +24,9 @@ db.open(function (err, db) {
 
     // Supprimons The Eye de King Diamond. Le deuxième paramètre au callback
     // indique le nombre d'objets qui ont été supprimés.
-    collection.remove({artist: "King Diamond", title: "The Eye"}, function (err, number) {
-      if (number > 0) {
-        var plural = (number > 1) ? "s" : "";
+    collection.deleteOne({artist: "King Diamond", title: "The Eye"}, function (err, result) {
+      if (result.deletedCount > 0) {
+        var plural = (result.deletedCount > 1) ? "s" : "";
         console.log("Album" + plural + " supprimé" + plural);
       }
       db.close();

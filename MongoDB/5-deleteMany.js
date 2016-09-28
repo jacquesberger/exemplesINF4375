@@ -105,9 +105,9 @@ db.open(function (err, db) {
     collection.insert(albums, function (err, result) {
 
       // On supprime tous les albums d'un seul coup.
-      collection.remove({artist: "Iron Maiden"}, function (err, number) {
-        var plural = (number > 1) ? "s" : "";
-        console.log(number, "album" + plural, "supprimé" + plural);
+      collection.deleteMany({artist: "Iron Maiden"}, function (err, result) {
+        var plural = (result.deletedCount > 1) ? "s" : "";
+        console.log(result.deletedCount + " album" + plural + " supprimé" + plural);
         db.close();
       });
     });

@@ -42,14 +42,14 @@ db.open(function (err, db) {
             console.log(err);
             db.close();
           } else {
-            var id = result[0]._id.toString();
+            var id = result.ops[0]._id.toString();
 
-            collection.update({_id: new mongo.BSONPure.ObjectID(id)}, {$set: {great: true}}, function (err, result) {
+            collection.update({_id: new mongo.ObjectID(id)}, {$set: {great: true}}, function (err, result) {
               if (err) {
                 console.log(err);
                 db.close();
               } else {
-                collection.remove({_id: new mongo.BSONPure.ObjectID(id)}, function (err, number) {
+                collection.remove({_id: new mongo.ObjectID(id)}, function (err, result) {
                   if (err) {
                     console.log(err);
                   }

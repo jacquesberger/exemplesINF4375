@@ -35,14 +35,16 @@ db.open(function (err, db) {
       // fait un toString sur l'id pour l'avoir sous forme de chaîne de
       // caractères. On le veut sous forme de string car c'est le format qu'on a
       // lorsque l'id provient d'une URL d'un service REST.
-      var albumId = result[0]._id.toString();
+      var albumId = result.ops[0]._id.toString();
      
       // Maintenant que nous avons l'id sous forme de string, on veut supprimer
       // l'album en utilisant l'id. Le type dans MongoDB pour l'id est ObjectId.
       // Il faut donc, dans la requête, utiliser également le type ObjectID
       // (attention à la différence de casse).
-      collection.remove({_id: new mongo.BSONPure.ObjectID(albumId)}, function (err, number) {
-        console.log("Album supprimé");
+      collection.deleteOne({_id: new mongo.ObjectID(albumId)}, function (err, result) {
+        if (result.deletedCount === 1) {
+          console.log("Album supprimé");
+        }
         db.close();
       });
     });
