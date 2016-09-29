@@ -38,7 +38,7 @@ stocker de l'information sur les candidats et sur leur parcours professionnel.
 
 4. Supprimez le premier dossier que vous avez créé.
 
-5. Ajouter une propriété nombre_tentatives avec la valeur 0 à tous les dossiers.
+5. Ajouter une propriété `nombre_tentatives` avec la valeur 0 à tous les dossiers.
 
 6. Changez le nom d'un candidat.
 
