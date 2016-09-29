@@ -51,7 +51,7 @@ stocker de l'information sur les candidats et sur leur parcours professionnel.
 10. Replacez des données dans MongoDB et expérimentez avec les commandes
     mongodump et mongorestore.
 
-<!-- Solutions -->
-<!-- --------- -->
+Solutions
+---------
 
-<!-- * [Exercices #1 à #9](Solutions.mongo.js) -->
+* [Exercices #1 à #9](Solutions.mongo.js)
