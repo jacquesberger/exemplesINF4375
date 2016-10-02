@@ -1,0 +1,12 @@
+INF1256 Informatique pour les sciences de la gestion
+INF2005 Programmation web
+INF2015 Développement de logiciels dans un environnement Agile
+INF3135 Construction et maintenance de logiciels
+INF3172 Principes des systèmes d'exploitation
+INF3180 Fichiers et bases de données
+INF4150 Interfaces personnes-machines
+INF4170 Architecture des ordinateurs
+INF4375 Paradigmes des échanges Internet
+INF5153 Génie logiciel : conception
+INM5151 Projet d'analyse et de modélisation
+MGL7460 Réalisation et maintenance des logiciels
