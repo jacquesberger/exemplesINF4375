@@ -25,3 +25,9 @@ gérer vos dépendances. La commande `npm init` sert à générer un package.jso
    les données dans une collection MongoDB.
 2. Faites un serveur HTTP qui affichera le contenu de la collection MongoDB dans
    un tableau HTML envoyé au fureteur.
+
+<!-- Solutions -->
+<!-- --------- -->
+
+<!-- * [Exercice #1](Solution1.js) -->
+<!-- * [Exercice #2](Solution2.js) -->
