@@ -1,0 +1,22 @@
+{
+  "name": "ateliernode",
+  "version": "1.0.0",
+  "description": "Atelier Node.js pour INF4375",
+  "main": "Solution1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacquesberger/exemplesINF4375.git"
+  },
+  "author": "Jacques Berger",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/jacquesberger/exemplesINF4375/issues"
+  },
+  "homepage": "https://github.com/jacquesberger/exemplesINF4375#readme",
+  "dependencies": {
+    "mongodb": "^2.2.10"
+  }
+}
