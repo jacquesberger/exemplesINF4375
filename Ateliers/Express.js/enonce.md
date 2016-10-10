@@ -30,3 +30,7 @@ programmer devra invoquer cette application à l'aide d'une requête HTTP.
 
 4. Créez un service qui retourne les données en format XML. Utilisez Jade pour
    générer le XML.
+
+5. Créez une page personnalisée à afficher en cas de 404.
+
+6. Créez une page personnalisée à afficher en cas de 500.
