@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h1= title
+  if liste_de_cours.length > 0
+    table
+      thead
+        tr
+          th Sigle
+          th Titre
+          th Crédits
+          th Offert à l'hiver
+          th Horaire
+      tbody
+        each cours in liste_de_cours
+          tr
+            td= cours.sigle
+            td= cours.titre
+            td= cours.credits
+            td
+              if cours.offert_hiver
+                input(type="checkbox", checked, disabled)
+              else
+                input(type="checkbox", disabled)
+            td
+              if cours.horaire.length > 0
+                ul
+                  each seance in cours.horaire
+                    li= seance
+  else
+    p Aucun cours à présenter.

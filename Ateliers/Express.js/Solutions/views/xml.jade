@@ -1,0 +1,10 @@
+doctype xml
+liste
+  each cours in liste_de_cours
+    cours
+      sigle= cours.sigle
+      titre= cours.titre
+      credits= cours.credits
+      offert_session_hiver #{cours.offert_hiver ? "Oui" : "Non"}
+      each seance in cours.horaire
+        horaire= seance
