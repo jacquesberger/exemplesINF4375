@@ -34,3 +34,8 @@ programmer devra invoquer cette application à l'aide d'une requête HTTP.
 5. Créez une page personnalisée à afficher en cas de 404.
 
 6. Créez une page personnalisée à afficher en cas de 500.
+
+<!-- Solutions -->
+<!-- --------- -->
+
+<!-- * [Exercices #1 à #6](Solutions/) -->
