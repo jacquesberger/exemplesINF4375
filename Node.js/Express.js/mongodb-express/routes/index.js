@@ -20,11 +20,11 @@ router.get('/', function(req, res) {
   db.getConnection(function(err, db){  
     db.collection('disco', function (err, disco) {
       if (err) {
-        res.send(500);
+        res.sendStatus(500);
       } else {
         disco.find().toArray(function (err, albums) {
           if (err) {
-            res.send(500);
+            res.sendStatus(500);
           } else {
             res.json(albums);
           }
