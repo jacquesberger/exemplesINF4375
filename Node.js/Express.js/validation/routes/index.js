@@ -49,7 +49,7 @@ router.post('/json', function(req, res) {
   if (result.errors.length === 0) {
     res.sendStatus(201);
   } else {
-    res.sendStatus(400);
+    res.status(400).json(result);
   }
 });
 
