@@ -1,0 +1,55 @@
+#%RAML 0.8
+---
+title: Services de bibliothèque
+baseUri: http://localhost:3000
+version: 1
+
+/api:
+  /livres:
+    get:
+      description: Fournir la liste des livres de la bibliothèque.
+      responses:
+        200:
+          description: La liste des livres a été correctement envoyée.
+          body:
+            application/json:
+              schema: !include ../schemas/multiple-books-output.json
+        500:
+          description: Une erreur interne s'est produite. L'erreur a été signalée à l'équipe de développement.
+    post:
+      description: Créer un nouveau livre.
+      body:
+        application/json:
+          schema: !include ../schemas/post-input.json
+      responses:
+        201:
+          description: Le livre a été créé.
+          body:
+            application/json:
+              schema: !include ../schemas/single-book-output.json
+        400:
+          description: Les données reçues n'ont pas le bon format.
+        500:
+          description: Une erreur interne s'est produite. L'erreur a été signalée à l'équipe de développement.
+    /{id}:
+      get:
+        description: Fournir l'information d'un livre selon son identifiant.
+        responses:
+          200:
+            description: Les données du livre ont été correctement envoyées.
+            body:
+              application/json:
+                schema: !include ../schemas/single-book-output.json
+          404:
+            description: L'identifiant spécifié n'existe pas.
+          500:
+            description: Une erreur interne s'est produite. L'erreur a été signalée à l'équipe de développement.
+      delete:
+        description: Supprimer un livre selon son identifiant.
+        responses:
+          200:
+            description: Le livre a été supprimé.
+          404:
+            description: L'identifiant spécifié n'existe pas.
+          500:
+            description: Une erreur interne s'est produite. L'erreur a été signalée à l'équipe de développement.

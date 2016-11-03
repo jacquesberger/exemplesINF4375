@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "required": true,
+  "properties": {
+    "_id": {
+      "type": "string",
+      "required": true
+    },
+    "author": {
+      "type": "array",
+      "required": true,
+      "items": {
+        "type": "string",
+        "required": false
+      }
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "year": {
+      "type": "number",
+      "required": true
+    }
+  }
+}
