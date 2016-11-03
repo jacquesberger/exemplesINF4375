@@ -8,6 +8,12 @@ version: 1
   /livres:
     get:
       description: Fournir la liste des livres de la bibliothèque.
+      queryParameters:
+        recherche:
+          description: Une chaîne de caractères qui doit être contenue dans le titre des livres.
+          type: string
+          required: false
+          example: RAML
       responses:
         200:
           description: La liste des livres a été correctement envoyée.
