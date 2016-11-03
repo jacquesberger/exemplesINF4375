@@ -94,3 +94,6 @@ illustrer les redirections et la navigation d'un site avec un formulaire.
 [MongoDB](Node.js/Express.js/mongodb-express) Application Express.js utilisant
 MongoDB pour illustrer comment utiliser un pool de connexions à la base de
 données.
+
+[RAML](Node.js/Express.js/raml) Application Express.js utilisant RAML pour la
+documentation des services. L'intégration à Express.js est faite avec raml2html.
