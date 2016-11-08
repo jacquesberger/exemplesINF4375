@@ -1,5 +1,6 @@
 .DS_Store
 *.swp
+*.swo
 Historique/FileTransferExample/FileTransferClient/build/
 Historique/FileTransferExample/FileTransferClient/dist/
 Historique/FileTransferExample/FileTransferClient/nbproject/private/
