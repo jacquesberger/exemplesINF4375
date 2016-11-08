@@ -44,8 +44,7 @@ router.get('/', function(req, res) {
 
 router.post('/json', function(req, res) {
   var data = req.body;
-  var validate = require('jsonschema').validate;
-  var result = validate(data, schema);
+  var result = jsonschema.validate(data, schema);
   if (result.errors.length === 0) {
     res.sendStatus(201);
   } else {
