@@ -30,3 +30,8 @@ Exercices
 2. Créez un service de modification d'une fiche de personne. Tous les champs
    sont optionnels et le client n'envoie que les valeurs qui ont changé. Le
    service doit valider les données du client à l'aide de json-schema.
+
+<!-- Solutions -->
+<!-- --------- -->
+
+<!-- * [Exercices #1 et #2](Solutions/) -->
