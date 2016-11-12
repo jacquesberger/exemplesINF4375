@@ -1,0 +1,40 @@
+{
+  "type": "array",
+  "required": true,
+  "items": {
+    "type": "object",
+    "required": true,
+    "additionalProperties": false,
+    "properties": {
+      "_id": {
+        "type": "string",
+        "required": true
+      },
+      "age": {
+        "type": "number",
+        "required": true
+      },
+      "nom": {
+        "type": "string",
+        "required": true
+      },
+      "prenom": {
+        "type": "string",
+        "required": true
+      },
+      "date_naissance": {
+        "type": "string",
+        "format": "date-time",
+        "required": true
+      },
+      "grades": {
+        "type": "array",
+        "required": true,
+        "items": {
+          "type": "string",
+          "required": false
+        }
+      }
+    }
+  }
+}
