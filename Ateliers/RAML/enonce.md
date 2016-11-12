@@ -23,7 +23,7 @@ Exercices
    application et documentez-le avec RAML. Utilisez `json-schema` pour
    documenter la sortie du service.
 
-Solutions
----------
+<!-- Solutions -->
+<!-- --------- -->
 
-* [Exercices #1 et #2](Solutions/)
+<!-- * [Exercices #1 et #2](Solutions/) -->

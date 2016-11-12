@@ -31,7 +31,7 @@ Exercices
    sont optionnels et le client n'envoie que les valeurs qui ont changé. Le
    service doit valider les données du client à l'aide de json-schema.
 
-<!-- Solutions -->
-<!-- --------- -->
+Solutions
+---------
 
-<!-- * [Exercices #1 et #2](Solutions/) -->
+* [Exercices #1 et #2](Solutions/)

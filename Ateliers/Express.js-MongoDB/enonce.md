@@ -30,7 +30,7 @@ Exercices
 6. Créer un service PUT à l'URL `/albums/:id`, où :id est l'ObjectId de l'album
    à supprimer. Le service doit retourner 404 si l'id n'existe pas.
 
-<!-- Solutions -->
-<!-- --------- -->
+Solutions
+---------
 
-<!-- * [Exercices #1 à #6](Solutions/) -->
+* [Exercices #1 à #6](Solutions/)
