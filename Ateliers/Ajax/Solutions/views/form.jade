@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h1= title
+  label Prénom : 
+  input#champ-prenom(type="text")
+  br
+  label Nom : 
+  input#champ-nom(type="text")
+  br
+  label Âge : 
+  input#champ-age(type="text")
+  br
+  label Année de naissance : 
+  input#champ-annee(type="text")
+  br
+  label Mois de naissance : 
+  input#champ-mois(type="text")
+  br
+  label Jour de naissance : 
+  input#champ-jour(type="text")
+  br
+  label Grade : 
+  input#champ-grade(type="text")
+  br
+  button(onclick="post();") Enregistrer

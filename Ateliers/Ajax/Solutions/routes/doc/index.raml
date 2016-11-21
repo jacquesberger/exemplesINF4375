@@ -1,0 +1,57 @@
+#%RAML 0.8
+---
+title: Dossiers
+baseUri: http://localhost:3000
+version: 1
+
+/dossiers:
+  get:
+    description: Obtenir tous les dossiers.
+    responses:
+      200:
+        description: "Tous les dossiers."
+        body:
+          application/json:
+            schema: !include ../schemas/get-all-customers.json
+      500:
+        description: Une erreur interne s'est produite. L'erreur a été signalée à l'équipe de développement.
+  post:
+    description: Création d'un dossier.
+    body:
+      application/json:
+        schema: !include ../schemas/create-customer.json
+    responses:
+      201:
+        description: Le dossier a été créé.
+        body:
+          application/json:
+            schema: !include ../schemas/get-customer.json
+      400:
+        description: Les données reçues n'ont pas le bon format.
+      500:
+        description: Une erreur interne s'est produite. L'erreur a été signalée à l'équipe de développement.
+  /{id}:
+    get:
+      description: Obtenir un dossier selon son identifiant.
+      body:
+        application/json:
+          schema: !include ../schemas/create-customer.json
+      responses:
+        200:
+          description: Le dossier a été retourné correctement.
+        404:
+          description: L'identifiant spécifié n'existe pas.
+        500:
+          description: Une erreur interne s'est produite. L'erreur a été signalée à l'équipe de développement.
+    put:
+      description: Modifier un dossier selon son identifiant.
+      body:
+        application/json:
+          schema: !include ../schemas/update-customer.json
+      responses:
+        200:
+          description: Le dossier a été modifié.
+        404:
+          description: L'identifiant spécifié n'existe pas.
+        500:
+          description: Une erreur interne s'est produite. L'erreur a été signalée à l'équipe de développement.

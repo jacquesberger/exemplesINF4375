@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Choisissez un dossier.
+  select#choix-dossier
+    for each in dossiers
+      option(value=each._id) #{each.prenom + ' ' + each.nom}
+  button(onclick='fetch();') GO
+  #result
+    p#champ-prenom
+    p#champ-nom
+    p#champ-date-naissance
+    p#champ-age
+    p#champ-grades
