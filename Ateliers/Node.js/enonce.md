@@ -21,6 +21,8 @@ Le module `mongodb` n'est pas disponible dans l'API de Node.js, il faut donc
 utiliser `npm` pour l'obtenir. À cet effet, utilisez un `package.json` pour
 gérer vos dépendances. La commande `npm init` sert à générer un package.json.
 
+[Exemples d'utilisation du module `mongodb` avec explications](https://github.com/jacquesberger/exemplesINF4375/tree/master/MongoDB)
+
 1. Faites un script qui lit les données de ce [fichier texte](fichiertexte.txt) et qui stocke
    les données dans une collection MongoDB.
 2. Faites un serveur HTTP qui affichera le contenu de la collection MongoDB dans
