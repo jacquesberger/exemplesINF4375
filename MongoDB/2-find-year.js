@@ -15,7 +15,6 @@
 const MongoClient = require("mongodb").MongoClient;
 const url = "mongodb://localhost:27017";
 
-// On se connecte sur le serveur de MongoDB
 MongoClient.connect(url, function(err, client) {
   if (err) {
     console.log(err);
@@ -25,8 +24,8 @@ MongoClient.connect(url, function(err, client) {
 
     // La méthode find retourne un curseur sur un ensemble de données. Le premier
     // paramètre de find contient les critères de la recherche. Le deuxième
-    // paramètre contient la liste des propriétés que l'on veut recevoir du
-    // serveur.
+    // paramètre contient des options, incluant la liste des propriétés que l'on
+    // veut recevoir du serveur.
     var cursor = collection.find({year: 1997}, {projection:{artist:true, title:true, _id:false}});
 
     // La méthode toArray sur un curseur permet de transformer la liste des

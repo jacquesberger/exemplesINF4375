@@ -12,19 +12,19 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-var mongo = require("mongodb");
+const MongoClient = require("mongodb").MongoClient;
+const url = "mongodb://localhost:27017";
 
-// Note : Cet exemple ne contient aucune gestion d'erreur.
-
-var server = new mongo.Server("localhost", 27017);
-var db = new mongo.Db("inf4375", server, {safe:true});
-
-db.open(function (err, db) {
-  db.collection("disco", function (err, collection) {
+MongoClient.connect(url, function(err, client) {
+  if (err) {
+    console.log(err);
+  } else {
+    const db = client.db("inf4375");
+    const collection = db.collection("disco");
 
     // C'est le même exemple que le précédent mais avec une utilisation
     // différente du curseur.
-    var cursor = collection.find({year: 1997}, {artist:true, title:true, _id:false});
+    let cursor = collection.find({year: 1997}, {projection: {artist:true, title:true, _id:false}});
     console.log("Albums publiés en 1997 :");
 
     // Le callback est appelé pour chaque objet retourné par le serveur. La
@@ -33,11 +33,15 @@ db.open(function (err, db) {
     // dernier callback qui sera lancé recevra null dans le deuxième paramètre,
     // on peut donc fermer la connexion à ce moment.
     cursor.each(function (err, album) {
+      if (err) {
+        console.log(err);
+      }
+
       if (album) {
         console.log("L'album", album.title, "de l'artiste", album.artist + ".");
       } else {
-        db.close();
+        client.close();
       }
     });
-  });
+  }
 });

@@ -12,19 +12,19 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-var mongo = require("mongodb");
+const MongoClient = require("mongodb").MongoClient;
+const url = "mongodb://localhost:27017";
 
-// Note : Cet exemple ne contient aucune gestion d'erreur.
-
-var server = new mongo.Server("localhost", 27017);
-var db = new mongo.Db("inf4375", server, {safe:true});
-
-db.open(function (err, db) {
-  db.collection("disco", function (err, collection) {
+MongoClient.connect(url, function(err, client) {
+  if (err) {
+    console.log(err);
+  } else {
+    const db = client.db("inf4375");
+    const collection = db.collection("disco");
 
     // Ajoutons plusieurs albums d'un même artiste. Nous les supprimerons
     // ensuite.
-    var albums = [
+    let albums = [
       {
         artist: "Iron Maiden",
         title: "Iron Maiden",
@@ -99,17 +99,30 @@ db.open(function (err, db) {
         artist: "Iron Maiden",
         title: "The Final Frontier",
         year: 2010
+      },
+      {
+        artist: "Iron Maiden",
+        title: "The Book of Souls",
+        year: 2015
       }
     ];
 
     collection.insert(albums, function (err, result) {
-
-      // On supprime tous les albums d'un seul coup.
-      collection.deleteMany({artist: "Iron Maiden"}, function (err, result) {
-        var plural = (result.deletedCount > 1) ? "s" : "";
-        console.log(result.deletedCount + " album" + plural + " supprimé" + plural);
-        db.close();
-      });
+      if (err) {
+        console.log(err);
+        client.close();
+      } else {
+        // On supprime tous les albums d'un seul coup.
+        collection.deleteMany({artist: "Iron Maiden"}, function (err, result) {
+          if (err) {
+            console.log(err);
+          } else {
+            let plural = (result.deletedCount > 1) ? "s" : "";
+            console.log(result.deletedCount + " album" + plural + " supprimé" + plural);
+          }
+          client.close();
+        });
+      }
     });
-  });
+  }
 });
