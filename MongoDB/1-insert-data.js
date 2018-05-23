@@ -12,27 +12,21 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-var mongo = require("mongodb");
+const MongoClient = require("mongodb").MongoClient;
+const url = "mongodb://localhost:27017";
 
-// Note : Cet exemple ne contient aucune gestion d'erreur.
+// On se connecte sur le serveur de MongoDB
+MongoClient.connect(url, function(err, client) {
+  if (err) {
+    console.log(err);
+  } else {
+    // Obtenir une référence sur la base de données
+    const db = client.db("inf4375");
 
-// Représente une connexion au serveur de données.
-var server = new mongo.Server("localhost", 27017);
-
-// Un accès à la base de données inf4375 du serveur spécifié. Le troisième
-// paramètre indique que les callbacks ne seront appelés que lorsque l'opération
-// sera terminée (succès ou échec) sur le serveur.
-var db = new mongo.Db("inf4375", server, {safe:true});
-
-// Ouverture de la base de données. Une fois l'ouverture terminée, le callback
-// passé en paramètre est appelé. Le paramètre err contient l'erreur si une
-// erreur est survenue, le paramètre db contient la base de données ouverte.
-db.open(function (err, db) {
-
-  // Se positionner sur une collection en particulier. C'est sur la collection
-  // que l'on peut effectuer la plupart des opérations, comme l'insertion de
-  // données. La collection est passée en paramètre au callback.
-  db.collection("disco", function (err, collection) {
+    // Se positionner sur une collection en particulier. C'est sur la collection
+    // que l'on peut effectuer la plupart des opérations, comme l'insertion de
+    // données.
+    const collection = db.collection("disco");
 
     var singleData = {
       artist: "Katra",
@@ -42,60 +36,73 @@ db.open(function (err, db) {
 
     // Insertion d'un seul enregistrement.
     collection.insert(singleData, function (err, result) {
-
-      var multipleData = [
-        {
-          artist: "Néodyme",
-          title: "La tour",
-          year: 2010
-        },
-        {
-          artist: "Iced Earth",
-          title: "The Dark Saga",
-          year: 1996
-        },
-        {
-          artist: "Bruce Dickinson",
-          title: "Accident of Birth",
-          year: 1997
-        },
-        {
-          artist: "Children of Bodom",
-          title: "Something Wild",
-          year: 1997
-        },
-        {
-          artist: "Dio",
-          title: "Holy Diver",
-          year: 1983
-        },
-        {
-          artist: "In Flames",
-          title: "Sense of Purpose",
-          year: 2008
-        },
-        {
-          artist: "King Diamond",
-          title: "The Eye",
-          year: 1990
-        }
-      ];
-
-      // Insertion de plusieurs enregistrements en même temps.
-      collection.insert(multipleData, function (err, result) {
-
-        // On affiche la liste complète des albums dans la collection pour
-        // montrer que les deux insertions ont bien fonctionnées.
-        collection.find().toArray(function (err, albums) {
-          for (var i = 0; i < albums.length; i++) {
-            var album = albums[i];
-            console.log("L'album", album.title, "de l'artiste", album.artist, "a été publié en", album.year + ".");
+      if (err) {
+        console.log(err);
+        client.close();
+      } else {
+        var multipleData = [
+          {
+            artist: "Néodyme",
+            title: "La tour",
+            year: 2010
+          },
+          {
+            artist: "Iced Earth",
+            title: "The Dark Saga",
+            year: 1996
+          },
+          {
+            artist: "Bruce Dickinson",
+            title: "Accident of Birth",
+            year: 1997
+          },
+          {
+            artist: "Children of Bodom",
+            title: "Something Wild",
+            year: 1997
+          },
+          {
+            artist: "Dio",
+            title: "Holy Diver",
+            year: 1983
+          },
+          {
+            artist: "In Flames",
+            title: "Sense of Purpose",
+            year: 2008
+          },
+          {
+            artist: "King Diamond",
+            title: "The Eye",
+            year: 1990
           }
+        ];
 
-          // On ferme la connexion à la base de données.
-          db.close();
+        // Insertion de plusieurs enregistrements en même temps.
+        collection.insert(multipleData, function (err, result) {
+          if (err) {
+            console.log(err);
+            client.close();
+          } else {
+            // On affiche la liste complète des albums dans la collection pour
+            // montrer que les deux insertions ont bien fonctionnées.
+            collection.find().toArray(function (err, albums) {
+              if (err) {
+                console.log(err);
+                client.close();
+              } else {
+                for (var i = 0; i < albums.length; i++) {
+                  var album = albums[i];
+                  console.log("L'album", album.title, "de l'artiste", album.artist, "a été publié en", album.year + ".");
+                }
+
+                // On ferme la connexion à la base de données.
+                client.close();
+              }
+            });
+          }
         });
-      });
+      }
     });
-  });
+  }
 });

@@ -6,6 +6,6 @@
   "license": "Apache-2.0",
   "repository": "https://github.com/jacquesberger/exemplesINF4375",
   "dependencies": {
-    "mongodb": "2.2.10"
+    "mongodb": "3.0.8"
   }
 }
