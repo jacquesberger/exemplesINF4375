@@ -17,78 +17,82 @@ var router = express.Router();
 var db = require('./db');
 
 router.get('/albums', function(req, res) {
-  db.getConnection(function(err, db){  
-    db.collection('albums', function (err, collection) {
-      if (err) {
-        res.sendStatus(500);
-      } else {
-        collection.find().toArray(function (err, albums) {
-          if (err) {
-            res.sendStatus(500);
-          } else {
-            res.json(albums);
-          }
-        });
-      }
-    });
+  db.getConnection(function(err, db){
+    if (err) {
+      console.log(err);
+      res.sendStatus(500);
+    } else {
+      const collection = db.collection('albums');
+      collection.find().toArray(function (err, albums) {
+        if (err) {
+          console.log(err);
+          res.sendStatus(500);
+        } else {
+          res.json(albums);
+        }
+      });
+    }
   });
 });
 
 router.post('/albums', function(req, res) {
-  db.getConnection(function(err, db){  
-    db.collection('albums', function (err, collection) {
-      if (err) {
-        res.sendStatus(500);
-      } else {
-        collection.insert(req.body, function(err, result) {
-          if (err) {
-            res.sendStatus(500);
-          } else {
-            res.status(201).json(result.ops[0]);
-          }
-        });
-      }
-    });
+  db.getConnection(function(err, db){
+    if (err) {
+      console.log(err);
+      res.sendStatus(500);
+    } else {
+      let collection = db.collection('albums');
+      collection.insert(req.body, function(err, result) {
+        if (err) {
+          console.log(err);
+          res.sendStatus(500);
+        } else {
+          res.status(201).json(result.ops[0]);
+        }
+      });
+    }
   });
 });
 
 router.delete('/albums/:id', function(req, res) {
-  db.getConnection(function(err, db){  
-    db.collection('albums', function (err, collection) {
-      if (err) {
-        res.sendStatus(500);
-      } else {
-        collection.remove({_id: new mongodb.ObjectId(req.params.id)}, function(err, result) {
-          if (err) {
-            res.sendStatus(500);
-          } else if (result.result.n === 0) {
-            res.sendStatus(404);
-          } else {
-            res.sendStatus(200);
-          }
-        });
-      }
-    });
+  db.getConnection(function(err, db){
+    if (err) {
+      console.log(err);
+      res.sendStatus(500);
+    } else {
+      let collection = db.collection('albums');
+      collection.remove({_id: new mongodb.ObjectId(req.params.id)}, function(err, result) {
+        if (err) {
+          console.log(err);
+          res.sendStatus(500);
+        } else if (result.result.n === 0) {
+          res.sendStatus(404);
+        } else {
+          res.sendStatus(200);
+        }
+      });
+    }
   });
 });
 
 router.put('/albums/:id', function(req, res) {
-  db.getConnection(function(err, db){  
-    db.collection('albums', function (err, collection) {
-      if (err) {
-        res.sendStatus(500);
-      } else {
-        collection.update({_id: new mongodb.ObjectId(req.params.id)}, {$set:{titre: req.body.titre, artiste: req.body.artiste}}, function(err, result) {
-          if (err) {
-            res.sendStatus(500);
-          } else if (result.result.n === 0) {
-            res.sendStatus(404);
-          } else {
-            res.sendStatus(200);
-          }
-        });
-      }
-    });
+  db.getConnection(function(err, db){
+    if (err) {
+      console.log(err);
+      res.sendStatus(500);
+    } else {
+      let collection = db.collection('albums');
+      collection.update({_id: new mongodb.ObjectId(req.params.id)}, {$set:{titre: req.body.titre, artiste: req.body.artiste}}, function(err, result) {
+        if (err) {
+          console.log(err);
+          res.sendStatus(500);
+        } else if (result.result.n === 0) {
+          res.sendStatus(404);
+        } else {
+          res.sendStatus(200);
+        }
+      });
+    }
   });
 });
 

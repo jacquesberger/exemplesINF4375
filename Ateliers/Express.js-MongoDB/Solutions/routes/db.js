@@ -1,5 +1,4 @@
-// Copyright 2014 Jacques Berger.
-// Inspiré du travail d'Alexandar Dimitrov à l'été 2014.
+// Copyright 2018 Jacques Berger.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,7 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-var mongodb = require("mongodb");
+var MongoClient = require("mongodb").MongoClient;
+var url = "mongodb://localhost:27017"
 
 var instanceMongoDB;
 
@@ -21,17 +21,13 @@ module.exports.getConnection = function(callback) {
   if (instanceMongoDB) {
     callback(null, instanceMongoDB);
   } else {
-    var server = new mongodb.Server("localhost", 27017, {auto_reconnect: true});
-    var db = new mongodb.Db("discography", server, {safe: true});
-
-    if (!db.openCalled) {
-      db.open(function(err, db) {
-        if (err) {
-          callback(err);
-        }
-        instanceMongoDB = db;
-        callback(err, instanceMongoDB);
-      });
-    }
+    MongoClient.connect(url, function(err, client) {
+      if (err) {
+        callback(err);
+      } else {
+        instanceMongoDB = client.db("discography");
+        callback(null, instanceMongoDB);
+      }
+    });
   }
 };
