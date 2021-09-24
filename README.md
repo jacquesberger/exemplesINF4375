@@ -1,4 +1,4 @@
-exemplesINF4375
+exemplesINF4375 1%
 ===============
 
 Les différents exemples présentés dans le cours INF4375.
